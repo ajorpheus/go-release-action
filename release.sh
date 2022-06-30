@@ -71,6 +71,8 @@ fi
 BUILD_ARTIFACTS_FOLDER=build-artifacts-$(date +%s)
 mkdir -p ${INPUT_PROJECT_PATH}/${BUILD_ARTIFACTS_FOLDER}
 cd ${INPUT_PROJECT_PATH}
+echo "Listing files in project_path : ${INPUT_PROJECT_PATH} ( $(pwd)) "
+ls -lha
 if [[ "${INPUT_BUILD_COMMAND}" =~ ^make.* ]]; then
     # start with make, assumes using make to build golang binaries, execute it directly
     GOAMD64=${GOAMD64_FLAG} GOOS=${INPUT_GOOS} GOARCH=${INPUT_GOARCH} eval ${INPUT_BUILD_COMMAND}
