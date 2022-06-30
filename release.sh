@@ -71,6 +71,7 @@ fi
 BUILD_ARTIFACTS_FOLDER=build-artifacts-$(date +%s)
 mkdir -p ${INPUT_PROJECT_PATH}/${BUILD_ARTIFACTS_FOLDER}
 echo "Listing files in project_path before cd ${INPUT_PROJECT_PATH} : ( $(pwd)) "
+find .
 cd ${INPUT_PROJECT_PATH}
 echo "Listing files in project_path : ${INPUT_PROJECT_PATH} ( $(pwd)) "
 ls -lha
